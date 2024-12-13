@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenZee - SocialFi Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body>
+    <div id="nav">
+      <h3><b>Gen</b>Zee🧩</h3>
+      <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div id="menu" class="hidden">
+        <button>Discover</button>
+        <button>Create Avatar</button>
+        <button>Connect</button>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="page">
+        <div id="loop">
+          <h1>
+            <b>Gen</b>Zee IS THE <b><i>FUTURE</i></b> <span>OF AVATAR</span> IN
+            THE <span><i>METAVERSE.</i></span>
+          </h1>
+          <h1>
+            <b>Gen</b>Zee IS THE <b><i>FUTURE</i></b> <span>OF AVATAR</span> IN
+            THE <span><i>METAVERSE.</i></span>
+          </h1>
+          <h1>
+            <b>Gen</b>Zee IS THE <b><i>FUTURE</i></b> <span>OF AVATAR</span> IN
+            THE <span><i>METAVERSE.</i></span>
+          </h1>
+        </div>
+        <h3>
+          GENZEE AIMS TO BE A DECENTRALIZED COMMUNITY WHERE YOU CAN <br />
+          CONNECT, CHAT, AND CREATE THROUGH AVATARS IN A VIRTUAL <br />
+          WORLD.
+        </h3>
+        <h4 style="color: rgb(161, 157, 103)">...SCROLL TO EXPLORE</h4>
+        <canvas></canvas>
+      </div>
+      <div id="page1">
+        <div id="right-text">
+          <h3>GENZEE / KEY FEATURES</h3>
+          <h1>
+            CONNECT WITH
+            <br />
+            3D AVATARS
+            <br />
+            IN REAL-TIME
+          </h1>
+        </div>
+        <div id="left-text">
+          <h1>
+            VIDEO CALLING
+            <br />
+            LIVE CHAT
+            <br />
+            WHITEBOARD SHARING
+          </h1>
+          <h3>..AND EXPERIENCE THE FUTURE OF SOCIAL INTERACTIONS</h3>
+        </div>
+      </div>
+      <div id="page2">
+        <div id="text1">
+          <h3>GENZEE / SOCIALFI</h3>
+          <h1>
+            MONETIZE YOUR
+            <br />
+            CONNECTIONS
+            <br />
+            WITH $GenZ
+          </h1>
+        </div>
+        <div id="text2">
+          <p>
+            GENZEE LETS YOU EARN WHILE YOU CONNECT! SHARE EXPERIENCES, <br />
+            BUILD RELATIONSHIPS, AND GET REWARDED IN $GenZ TOKENS <br />
+            AS YOU EXPLORE A NEW DEFI SOCIAL EXPERIENCE.
+          </p>
+        </div>
+      </div>
+      <div id="page3">
+        <div id="text3">
+          <h3>GENZEE / COMMUNITY</h3>
+          <h1>
+            GENZEE
+            <br />
+            IS THE
+            <br />
+            FUTURE OF SOCIAL
+          </h1>
+        </div>
+      </div>
+
+       <div id="page4">
+        <div id="text4">
+          <h3>GENZEE / COMMUNITY</h3>
+          <h1>
+            GENZEE
+            <br />
+            IS THE
+            <br />
+            FUTURE OF SOCIAL
+          </h1>
+        </div>
+      </div> 
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-logo">
+          <h3><b>Gen</b>Zee</h3>
+        </div>
+        <div class="footer-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+        <div class="footer-info">
+          <p>&copy; 2024 GenZee. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+      integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient background */
+#page, #page1, #page2, #page3, #page4 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #FFD700, #FFFACD, #000000); /* Yellow, Cream, Black gradient */
+
+}
+
+#page1 , #page3
+{
+    z-index: 19;
+}
+
+/* Ensuring canvas stays on top */
+canvas {
+    position: fixed;
+    z-index: 9;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#loop {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    height: 25%;
+    width: 100%;
+    font-size: 100px;
+    white-space: nowrap;
+    font-family: gilroy;
+    z-index: 67;
+}
+
+#loop>h1 {
+    font-weight: 400;
+    animation-name: anim;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 67;
+    color: #FFFACD; /* Creamy color for text */
+}
+
+#loop>h1>span {
+    -webkit-text-stroke: 1.2px #000; /* Black stroke for contrast */
+    color: transparent;
+    font-weight: 500;
+    z-index: 67;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Navigation bar styling */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 0px 30px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+}
+
+#nav>h3 {
+    font-family: gilroy;
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFD700; /* Yellow text for the nav title */
+}
+
+#nav>button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #FFD700; /* Yellow button */
+    color: #000; /* Black text */
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Page-specific headings and text */
+#page>h3 {
+    position: absolute;
+    top: 55%;
+    font-family: gilroy;
+    font-weight: 400;
+    color: #85804f; /* Creamy color for text */
+    left: 5%;
+}
+
+#page>h4 {
+    position: absolute;
+    top: 62%;
+    left: 25%;
+    font-family: gilroy;
+    font-weight: 500;
+    color: #FFFACD; /* Creamy color for scroll prompt */
+    
+}
+
+#page1>#right-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#page1>#right-text>h3 {
+    font-weight: 400;
+    color: #FFFACD; /* Creamy color */
+}
+
+#page1>#right-text>h1 {
+    line-height: 1.5;
+    font-size: 50px;
+    color: #FFD700; /* Yellow text */
+}
+
+#page1>#left-text {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    text-align: end;
+}
+
+#page1>#left-text>h1 {
+    font-size: 50px;
+    line-height: 1.5;
+    color: #FFD700; /* Yellow text */
+}
+
+#page1>#left-text>h3 {
+    color: #FFFACD; /* Creamy text */
+    font-weight: 400;
+}
+
+#page2>#text1 {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#page2>#text1>h3 {
+    color: #FFFACD; /* Creamy text */
+    font-weight: 400;
+}
+
+#page2>#text1>h1 {
+    font-size: 60px;
+    line-height: 1.5;
+    color: #FFD700; /* Yellow text */
+}
+
+#page2>#text2 {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+    text-align: end;
+}
+
+#page2>#text2>p {
+    color: #FFFACD; /* Creamy color */
+    font-weight: 400;
+}
+
+#page3>#text3 {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    text-align: end;
+}
+
+#page3>#text3>h3 {
+    color: #FFFACD; /* Creamy text */
+    font-weight: 400;
+}
+
+#page3>#text3>h1 {
+    font-size: 70px;
+    color: #FFD700; /* Yellow text */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    #loop {
+        font-size: 80px;
+    }
+
+    #page1>#right-text>h1, #page1>#left-text>h1, #page2>#text1>h1, #page3>#text3>h1 {
+        font-size: 45px;
+        
+    }
+
+    #page3>#text3>h1 {
+        font-size: 60px;
+       
+    }
+}
+
+@media (max-width: 768px) {
+    #loop {
+        font-size: 60px;
+    }
+
+    #nav>h3 {
+        font-size: 18px;
+    }
+
+    #page1>#right-text>h1, #page1>#left-text>h1, #page2>#text1>h1, #page3>#text3>h1 {
+        font-size: 40px;
+    }
+
+    #page3>#text3>h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    #loop {
+        font-size: 40px;
+    }
+
+    #nav>h3 {
+        font-size: 16px;
+    }
+
+    #nav>button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #page1>#right-text>h1, #page1>#left-text>h1, #page2>#text1>h1, #page3>#text3>h1 , #page4>#text4>h1{
+        font-size: 30px;
+    }
+
+    #page3>#text3>h1 {
+        font-size: 45px;
+        
+    }
+ 
+}
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    z-index: 100;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: #FFD700; /* Yellow color for the lines */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #FFF; /* Change to white when active */
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #FFF;
+}
+
+/* Menu Styling */
+#menu {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+#menu.hidden {
+    display: none;
+}
+
+#menu button {
+    background-color: #FFD700;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    color: #FFD700; /* Yellow for logo text */
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #FFD700; /* Yellow for social media links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-info p {
+    color: #FFFACD; /* Creamy text for footer info */
+}
+
+#page4>#text4 {
+    position: absolute;
+    top: 30%; /* Aligns with a visually appealing position */
+    left: 10%; /* Adds uniform padding from the left */
+    z-index: 20; /* Keeps it on top of background */
+}
+
+#page4>#text4>h3 {
+    font-family: gilroy;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFACD; /* Creamy text for subheading */
+    margin-bottom: 10px;
+}
+
+#page4>#text4>h1 {
+    font-family: gilroy;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #FFD700; /* Yellow for the main header text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Subtle shadow for contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #page4>#text4>h1 {
+        font-size: 45px; /* Reduce size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    #page4>#text4 {
+        top: 20%; /* Adjust position for smaller screens */
+        left: 5%; /* Add padding for small devices */
+    }
+
+    #page4>#text4>h1 {
+        font-size: 30px; /* Further reduce for mobile screens */
+    }
+
+    #page4>#text4>h3 {
+        font-size: 16px; /* Smaller subheading text */
+    }
+}
+canvas {
+    pointer-events: none;
+    
+  }
+
